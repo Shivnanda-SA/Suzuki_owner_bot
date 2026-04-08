@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY api/app ./app
 COPY data ./data
 
+RUN python -m app.ingest --clear
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
