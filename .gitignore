@@ -1,0 +1,10 @@
+.env
+.env.local
+.venv
+__pycache__/
+*.pyc
+web/node_modules/
+web/.next/
+*.egg-info/
+dist/
+data/chroma/

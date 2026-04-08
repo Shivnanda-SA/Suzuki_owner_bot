@@ -1,0 +1,40 @@
+:root {
+  --bg: #0c1220;
+  --surface: #121a2e;
+  --surface-2: #1a2540;
+  --text: #e8eef8;
+  --muted: #8fa3c4;
+  --accent: #1e6bff;
+  --accent-dim: #3d84ff;
+  --border: rgba(255, 255, 255, 0.08);
+  --success: #2ee59d;
+  --warning: #ffc14d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: radial-gradient(1200px 600px at 10% -10%, #1a2a4a 0%, transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, #132038 0%, transparent 50%), var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+a {
+  color: var(--accent-dim);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}

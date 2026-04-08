@@ -1,0 +1,112 @@
+[
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/User-Manual",
+    "doc_type": "manual",
+    "model": "Access 125",
+    "title": "Owner Manual — Access 125 (excerpt)",
+    "product_family": "scooter",
+    "sections": [
+      {
+        "title": "First service",
+        "text": "The first free service must be completed within 750 km or 30 days from the date of sale, whichever comes first. Use only genuine Suzuki engine oil and filters at an authorized Suzuki service center. Missing the first service window may affect warranty coverage for related components."
+      },
+      {
+        "title": "Periodic maintenance",
+        "text": "Follow the maintenance schedule in your owner manual. Typical intervals: every 3000 km or 90 days for engine oil check; valve clearance inspection as per schedule. Harsh riding or dusty conditions may require more frequent service."
+      },
+      {
+        "title": "Battery care",
+        "text": "Keep the battery terminals clean and tight. If the vehicle is unused for extended periods, start the engine periodically or use a battery tender as recommended. Weak battery can affect self-start performance."
+      }
+    ]
+  },
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/User-Manual",
+    "doc_type": "manual",
+    "model": "Gixxer SF 250",
+    "title": "Owner Manual — Gixxer SF 250 (excerpt)",
+    "product_family": "motorcycle",
+    "sections": [
+      {
+        "title": "Break-in period",
+        "text": "During break-in, avoid sustained high RPM and full throttle. Vary engine speed and allow the engine to warm up before riding. First service timing is critical — refer to the schedule chart for km and month limits."
+      },
+      {
+        "title": "Chain maintenance",
+        "text": "Inspect drive chain slack and lubrication regularly. Incorrect chain tension can affect handling and sprocket life. Clean and lubricate more frequently in wet or dusty riding conditions."
+      }
+    ]
+  },
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/warranty",
+    "doc_type": "warranty",
+    "title": "Warranty overview (representative PoC text)",
+    "sections": [
+      {
+        "title": "What is covered",
+        "text": "Manufacturing defects in materials and workmanship under normal use are covered for the warranty period stated in your warranty booklet, subject to terms. Warranty requires servicing at authorized Suzuki outlets with genuine parts as specified."
+      },
+      {
+        "title": "What is not covered",
+        "text": "Damage from accidents, misuse, racing, improper maintenance, use of non-genuine parts, or modifications not approved by Suzuki. Natural wear items (brake pads, tyres, bulbs, etc.) and consumables may be excluded except where a manufacturing defect is proven."
+      },
+      {
+        "title": "Claims",
+        "text": "Warranty claims are evaluated by authorized service personnel. Keep invoices and service records. For disputes, contact Suzuki customer care through official channels listed on the website."
+      }
+    ]
+  },
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/service",
+    "doc_type": "service_schedule",
+    "title": "Service & maintenance (PoC)",
+    "sections": [
+      {
+        "title": "Booking",
+        "text": "You can locate an authorized service center on the official Suzuki Motorcycle India website and contact them for appointment availability. Some dealers offer online or phone booking; availability varies by city."
+      },
+      {
+        "title": "Service campaigns",
+        "text": "Suzuki may announce service campaigns or recalls for specific models or batches. Check the Service Campaign or Notice section on the official site and use your chassis number where required to verify applicability."
+      }
+    ]
+  },
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/service-centers",
+    "doc_type": "service_center",
+    "title": "Service centers — sample listings (synthetic)",
+    "sections": [
+      {
+        "title": "Pune — Authorized service",
+        "text": "Suzuki authorized service center — Pune area (sample): FC Road and Baner locations offer periodic maintenance and warranty support. Call the dealer for exact address and timings. Use only official channels for bookings."
+      },
+      {
+        "title": "Mumbai — Authorized service",
+        "text": "Multiple authorized Suzuki service points in Mumbai region (sample data). Verify current address and holiday hours on the official dealer locator before visiting."
+      },
+      {
+        "title": "Delhi NCR — Authorized service",
+        "text": "Authorized centers in Delhi, Gurugram, Noida (sample). EV and ICE models may be supported at different outlets — confirm with the dealer."
+      },
+      {
+        "title": "Bengaluru — Authorized service",
+        "text": "Bengaluru has several authorized Suzuki two-wheeler service outlets (sample). Peak season slots may fill quickly — book ahead."
+      }
+    ]
+  },
+  {
+    "source_url": "https://www.suzukimotorcycle.co.in/contact-us",
+    "doc_type": "support",
+    "title": "Customer support & escalation (PoC)",
+    "sections": [
+      {
+        "title": "Contact",
+        "text": "For product queries, service, or complaints, use the contact options published on Suzuki Motorcycle India official website. Keep your vehicle registration and chassis number handy. Do not share OTPs or personal credentials with unofficial callers."
+      },
+      {
+        "title": "Safety",
+        "text": "If you experience sudden loss of braking, fuel smell, or electrical smoke, stop safely and contact road assistance or an authorized workshop. This assistant provides general guidance only — emergencies require professional help."
+      }
+    ]
+  }
+]

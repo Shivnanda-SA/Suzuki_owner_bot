@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: suzuki
+    ports:
+      - "5432:5432"
+    volumes:
+      - suzuki_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d suzuki"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:admin@db:5432/suzuki
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001
+      APP_ENV: development
+      CHROMA_PERSIST_DIR: /app/data/chroma
+    volumes:
+      - suzuki_chroma:/app/data/chroma
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+      args:
+        API_PROXY_TARGET: http://api:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  suzuki_pg:
+  suzuki_chroma:

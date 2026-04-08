@@ -1,0 +1,32 @@
+Suzuki Owner Support PoC — run & deploy
+
+Local (no Docker, Windows)
+1. Python 3.12+ recommended. If you use 3.14, use updated api/requirements.txt (pydantic 2.12+, sqlalchemy 2.0.49+, psycopg2-binary 2.9.11+) so pip does not compile Rust.
+2. py -3.14 -m venv .venv  OR  py -3.12 -m venv .venv
+3. .\.venv\Scripts\activate
+4. cd api
+5. pip install -r requirements.txt
+6. Copy project .env to api\.env (or set DATABASE_URL / OPENAI_API_KEY in the shell).
+7. python -m app.ingest --clear
+8. set PYTHONPATH=.  (PowerShell: $env:PYTHONPATH='.')
+9. python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+10. In web/: npm install && npm run dev
+
+Local (Docker)
+1. Copy .env.example to .env and set OPENAI_API_KEY.
+2. docker compose up --build -d db api
+3. Index seed data (one-time): docker compose run --rm -e OPENAI_API_KEY api python -m app.ingest --clear
+4. docker compose up -d web
+5. Open http://localhost:3000 — API http://localhost:8000/docs
+
+Render
+1. Create Render PostgreSQL; in SQL console: CREATE EXTENSION IF NOT EXISTS vector;
+2. Deploy api (Dockerfile api/Dockerfile, context repo root). Set DATABASE_URL, OPENAI_API_KEY, CORS_ORIGINS (your web URL), optional ADMIN_TOKEN.
+3. POST /admin/reindex with header X-Admin-Token if ADMIN_TOKEN set (indexes seed JSON in image).
+4. Deploy web with build arg NEXT_PUBLIC_API_URL=https://<your-api>.onrender.com
+
+Notes
+- Vectors: ChromaDB on disk (CHROMA_PERSIST_DIR / docker volume suzuki_chroma). Postgres: chat_sessions + feedback only (no pgvector).
+- DATABASE_URL must use SQLAlchemy + psycopg3: postgresql+psycopg://... (plain postgresql:// is auto-normalized).
+- Seed content in data/seed/documents.json is synthetic PoC text — replace with crawled public pages and legal review before production.
+- render.yaml is a template; link env vars to your service names in the Render UI.
